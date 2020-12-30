@@ -1,26 +1,16 @@
 "use strict";
 
-// Найдите минимальное и максимальное число
+// Дан массив arr. Найдите среднее арифметическое его элементов
 
-function getMinAndMaxNumbers() {
-  return [getMin(arguments), getMax(arguments)];
+const arr = [12, 15, 20, 25, 59, 79];
+
+function getAritmeticMean(arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
 }
 
-function getMin(arr) {
-  let min = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
-    }
-  }
-  return min;
-}
-function getMax(arr) {
-  let max = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  }
-  return max;
-}
+console.log(getAritmeticMean(arr));
