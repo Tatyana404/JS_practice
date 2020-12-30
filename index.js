@@ -1,16 +1,10 @@
 "use strict";
 
-// Дан массив arr. Найдите среднее арифметическое его элементов
+// Выведите на экран случайное целое число от 1 до 100
 
-const arr = [12, 15, 20, 25, 59, 79];
+let arr = [];
 
-function getAritmeticMean(arr) {
-  let sum = 0;
-
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum / arr.length;
+for (let i = 0; i < 10; i++) {
+  arr.push(Math.ceil(Math.random() * 100));
 }
-
-console.log(getAritmeticMean(arr));
+console.log(arr);
